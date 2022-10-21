@@ -11,7 +11,7 @@
 
 <body>
     <script>
-        'use scrict'
+        'use strict'
 
 
         const person = {
@@ -39,12 +39,14 @@
         const x = {
             name: 'vinoth',
             age: 22,
-            Qualification: "B.E"
+            Qualification: "Bachelor of Engineering"
         };
         console.log(x);
+        console.dir(x);
 
         // entries
         console.log(Object.entries(x), 'entries');
+        console.table(Object.entries(x));
 
         // fromEntries
         console.log(Object.fromEntries([
@@ -100,7 +102,6 @@
         let a = Object.assign(x, y);
         console.log(a, 'assign');
         console.log(a === x);
-
 
 
     </script>

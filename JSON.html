@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+    <script>
+
+        // javaScript Object to JSON
+        const xyz = {
+            firstName: 'Vinoth',
+            lastName: 'Shanmugam',
+            age: 22,
+            Array: ['vinoth', 'hari', 'pershik'],
+            getName() {
+                return this.firstName + ' ' + this.lastName;
+            },
+            ab: undefined,
+            bc: null,
+            cd: true,
+            de: Infinity,
+        };
+        console.log(xyz);
+        console.log(JSON.stringify(xyz, null, 4));
+
+
+        // JSON to javaScript Object
+        const y = JSON.stringify({
+            "firstName": "Vinoth",
+            "lastName": "Shanmugam",
+            "age": 22,
+            "Array": [
+                "vinoth",
+                "hari",
+                "pershik"
+            ],
+            "bc": null,
+            "cd": true,
+            "de": null
+        })
+        console.log(JSON.parse(y));
+    </script>
+</body>
+
+</html>
