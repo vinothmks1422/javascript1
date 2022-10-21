@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method</title>
+</head>
+
+<body>
+    <script>
+     /*
+   String Methods..
+        1. indexOf
+        2. lastIndexOf
+        3. charAt
+        4. charCodeAt
+        5. at
+        6. slice
+        7. substring
+        8. search
+        9. split
+        10. match
+        11. replace
+        12. replaceAll
+        13. concat
+        14. toUpperCase
+        15. toLowerCase
+        16. padStart
+        17. padEnd
+        18. trim
+        19. trimStart
+        20. trimEnd
+        21. startsWith
+        22. endsWith
+        23. includes
+        24. repeat
+            */
+
+        let a = "My Name is Vinoth and Full Name is Vinoth Shanmugam";
+        let b = '     5      ';
+        let c = '2';
+        console.log(a);
+        console.log(a.length, 'length of the string');
+        
+        // indexOf
+        console.log(a.indexOf(''), 'indexOf');
+        console.log(a.indexOf('s'));
+
+        // lastIndexOf
+        console.log(a.lastIndexOf(''), 'lastIndexOf');
+        console.log(a.lastIndexOf('S'));
+
+        // charAt
+        console.log(a.charAt(),'charAt');
+        console.log(a.charAt(5));
+        console.log(a.charAt(10));
+
+        // charCodeAt
+        console.log(a.charCodeAt(), 'charCodeAt');
+        console.log(a.charCodeAt(5));
+        console.log(a.charCodeAt(10));
+
+        // at
+        console.log(a.at(), 'at');
+        console.log(a.at(5));
+
+        // slice
+        console.log(a.slice(), 'slice');
+        console.log(a.slice(0,5));
+        console.log(a.slice(5,10));
+
+        // substring
+        console.log(a.substring(), 'substring');
+        console.log(a.substring());
+        console.log(a.substring());
+
+        // search
+        console.log(a.search(''),'search');
+        console.log(a.search('Vinoth'));
+        console.log(a.search('name'));
+
+        // split
+        console.log(a.split(''), 'split');
+        console.log(a.split(' '));
+
+        // replace
+        console.log(a.replace('Vinoth', 'Raja'),'replace');
+        console.log(a.replace('Vinoth', ''));
+
+        // replaceAll
+        console.log(a.replaceAll('Vinoth', 'Raja'), 'replaceAll');
+
+        // Math
+        console.log(Math.PI, 'Math');
+        console.log(Math.sqrt(25));
+
+        // concat
+        console.log(a.concat('Shanmugam') , 'concat');
+
+        // toUpperCase
+        console.log(a.toUpperCase(), 'toUpperCase');
+
+        // toLowerCase
+        console.log(a.toLowerCase(),'toLowerCase');
+
+        console.log(b);
+        console.log(b.length);
+        console.log(b.trimStart(), 'trimStart');
+        console.log(b.trimEnd(), 'trimEnd');
+        console.log(b.trim(), 'trim');
+
+        console.log(c);
+        console.log(c.padStart(3,'0'), 'padStart'); 
+        console.log(c.padEnd(3,'0'), 'padEnd'); 
+
+        console.log(a.startsWith(), 'startsWith');
+        console.log(a.startsWith(''));
+        console.log(a.startsWith('my'));
+        console.log(a.startsWith('My'));
+        console.log(a.startsWith('My', 3));
+        console.log(a.startsWith('Name', 3));
+
+        console.log(a.endsWith(), 'endsWith');
+        console.log(a.endsWith(''));
+        console.log(a.endsWith('Shanmugam'));
+        console.log(a.endsWith('Vinoth', 17));
+
+        console.log(a.includes(''));
+        console.log(a.includes('Vinoth'));
+        console.log(a.includes('Vinoth',20));
+        console.log(a.includes('Vinoth',45));
+
+        console.log(a.repeat(2));
+
+        let x = 16;
+        let y = 64;
+
+        console.log(Math.sqrt(x));
+        console.log(Math.abs(x));
+        console.log(Math.acos(x));
+        console.log(Math.acosh(x));
+        console.log(Math.asin(x));
+        console.log(Math.asinh(x));
+        console.log(Math.cbrt(y));
+        console.log(Math.log(y));
+        console.log(Math.log10(y));
+        console.log(Math.log2(y));
+
+      </script>
+</body>
+
+</html>

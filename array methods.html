@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+
+<body>
+    <script>
+        'use'
+        /*
+            Array Methods
+            1. join
+            2. indexOf
+            3. lastindexOf
+            4. includes
+            5. find
+            6. findIndex
+            7. map
+            8. filter
+            9. forEach
+            10. reduce
+            11. reduceRight
+            12. some
+            13. every
+            14. push
+            15. pop
+            16. sort
+            17. shift
+            18. unshift
+            19. splice
+            20. reverse
+            21. fill
+            22. copyWithin
+            23. entries
+            
+            Static methods
+            1. from
+            2. of
+            3. isArray
+        */
+
+        const xy = ['abc', 'def', 'ghi', 'jkl'];
+
+        let text1 = '';
+        for (let i = 0; i < xy.length; i++) {
+            text1 += xy[i] + ',';
+        }
+        console.log(text1);
+
+
+
+        const yz = ['ABC', 'DEF', 'GHI', 'JKL'];
+        let text = '';
+        yz.forEach(myFunction)
+
+        function myFunction(value) {
+            text += value + ' ';
+        }
+        console.log(text);
+
+        console.log(yz.length);
+        console.log(yz.indexOf('DEF'));
+        console.log(yz[0]);
+
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango", "Apple"];
+        const number = [43, 25, 74, 33, 18];
+        const fills = [012, 876, 986, 765, 855];
+        let abc = 'vinoth'
+
+        console.log(fruits);
+
+        // join
+        console.log(fruits.join(), 'join');
+        console.log(fruits.join(' '));
+        console.log(fruits.join(' * '));
+        console.log(fruits.join(' | '));
+
+        // indexOf(it search the left to right)
+        console.log(fruits.indexOf(), 'indexOf');
+        console.log(fruits.indexOf(''));
+        console.log(fruits.indexOf('Apple'));
+        console.log(fruits.indexOf('Apple', 3));
+
+        // lastIndexOf (it search the string right to left)
+        console.log(fruits.lastIndexOf(''), 'lastIndexOf');
+        console.log(fruits.lastIndexOf('Apple'));
+
+        // push
+        console.log(fruits.push('apple'), 'push');
+
+        // pop
+        console.log(fruits.pop(), 'pop');
+
+        // unshift
+        console.log(fruits.unshift('grapes'), 'unshift');
+
+        // shift
+        console.log(fruits.shift(), 'shift');
+
+        // sort
+        console.log(fruits.sort(), 'sort');
+
+        // reverse
+        console.log(fruits.reverse(), 'reverse');
+
+        // slice
+        console.log(fruits.slice(), 'slice');
+        console.log(fruits.slice(2));
+        console.log(fruits.slice(2, 4));
+
+        // splice
+        console.log(fruits.splice(2, 2), 'splice');
+        console.log(fruits.splice(2, 0, 'grapes', 'pineapple'));
+        console.log(fruits.splice(2, 1, 'jerry', 'guava'));
+
+        // includes
+        console.log(fruits.includes(''), 'includes');
+        console.log(fruits.includes('Apple'));
+        console.log(fruits.includes('guava'));
+
+        // fill
+        console.log(fruits.fill('vinoth', 2, 4), 'fill');
+        console.log(fills.fill(25));
+        console.log(fills.fill(100, 1, 4));
+
+        // copyWithin
+        console.log(number.copyWithin(), 'copyWithin');
+        console.log(number.copyWithin(2, 3));
+        console.log(number.copyWithin(2, 0, 2));
+
+        // entries
+        let f = fruits.entries();
+        for (let x of f) {
+            console.log(x);
+        }
+
+        const passMark = 35;
+
+        // every
+        const p = number.every(function (item, i) {
+            // console.log(i, item);
+            if (item >= passMark) {
+                return true;
+            }
+            return false;
+        })
+        console.log(p, 'every');
+
+        // some
+        const q = number.some(function (item) {
+            return item >= passMark
+        })
+        console.log(q, 'some');
+
+        // filter
+        const d = number.filter(function (pass) {
+            return pass >= passMark
+        })
+        console.log(d, 'filter');
+
+        const e = number.filter(function (fail) {
+            return fail <= passMark
+        })
+        console.log(e);
+        // find
+        const r = fruits.find(function (item, index) {
+            // console.log(item, index);
+            if (item.search(/vinoth/i) !== -1) {
+                return true
+            }
+            return false
+        })
+        console.log(r, 'find');
+
+        const t = fruits.find(function (item, index) {
+            const z = item.toLowerCase();
+            return z.indexOf('vinoth') !== -1
+        })
+        console.log(t);
+
+        const v = fruits.find(function (item, index) {
+            const z = item.toLowerCase();
+            return z.includes('mango')
+        })
+        console.log(v);
+
+        // findIndex
+        const s = fruits.findIndex(function (item) {
+            return item.search(/vinoth/i) !== -1
+        })
+        console.log(s, 'findIndex');
+
+        const u = fruits.findIndex(function (item, index) {
+            const z = item.toLowerCase();
+            return z.indexOf('pineapple') !== -1
+        })
+        console.log(u);
+
+        const w = fruits.findIndex(function (item, index) {
+            const z = item.toLowerCase();
+            return z.includes('apple')
+        })
+        console.log(w);
+
+        // map
+        console.log(number.map(function (item) {
+            return item * 10;
+        }), 'map');
+
+        // isArray
+        console.log(Array.isArray(number), 'isArray');
+        console.log(Array.isArray(fruits));
+        console.log(Array.isArray(abc));
+        console.log(Array.isArray(fills));
+
+    //     const arr = [2, 5, 0, 9, '', false, true, undefined];
+    //     const abcd = arr.filter(Boolean);
+    //     console.log(abcd);
+    // </script>
+</body>
+
+</html>

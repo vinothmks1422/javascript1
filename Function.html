@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of Function Decleration</title>
+</head>
+
+<body>
+    <script>
+
+        'use scrict'
+
+        // 1.General function decleartion
+
+        function abc() {
+            console.log(10);
+        }
+        abc();
+
+        function bca(x, y) {
+            console.log(x + y);
+        }
+        bca(10, 20);
+
+        function cba(x = 0, y = 0, z = 1) {
+            console.log(x, y, z);
+        }
+        cba(10, 20);
+
+        // 2.Un-named Function or Anonymous function
+
+        const a = function () {
+            console.log(10);
+        }
+        a();
+
+        const b = function (x = 1, y = 1, z = 1) {
+            console.log(x * y + z);
+        }
+        b(5, 20);
+
+        // 3.arrow function
+
+        const c = (x, y) => {
+            console.log(x * y)
+        }
+        c(5, 7);
+
+
+        const d = () => {
+            console.log(10, 20)
+        }
+        d();
+
+        // 4.Immidiately Invocked Function Expression(IIEF)
+
+        (function (x, y) {
+            console.log(x * y);
+        }(12, 4));
+
+
+        (function () {
+            console.log(10 * 2.5);
+        }());
+
+
+    </script>
+</body>
+
+</html>

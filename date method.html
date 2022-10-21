@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date method</title>
+</head>
+
+<body>
+    <script>
+
+        const today = new Date();
+
+        //get method
+        console.log(today.getFullYear());
+        console.log(today.getMonth());
+        console.log(today.getDate());
+        console.log(today.getDay());
+        console.log(today.getHours());
+        console.log(today.getMinutes());
+        console.log(today.getSeconds());
+        console.log(today.getMilliseconds());
+
+        //set method
+        const a = new Date();
+
+        a.setFullYear(1999);
+        a.setMonth(04);
+        a.setDate(04);
+        a.setHours(20);
+        a.setMinutes(30);
+
+        console.log(a);
+
+        // age calculation
+        const dob = new Date(2000, 01, 14);
+        const age = (today - dob) / (1000 * 60 * 60 * 24 * 365);
+        console.log(age);
+
+        const dob1 = new Date(1962, 03, 14);
+        const age1 = (today - dob1) / (1000 * 60 * 60 * 24 * 365);
+        console.log(age1);
+
+
+    </script>
+</body>
+
+</html>

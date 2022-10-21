@@ -1,0 +1,109 @@
+9
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+
+<body>
+    <script>
+        'use scrict'
+
+
+        const person = {
+            firstName: 'Vinoth',
+            lastName: 'Shanmugam',
+            age: 22,
+            interest: ['creative a new things', 'Long travels', 'Ride on bike'],
+            siblings: {
+                firstSister: 'Madhu',
+                secondSister: 'Chenchu',
+                brother: 'Hari'
+            },
+            greeting: function () {
+                name = 'My name is' + ' ' + this.firstName + ' ' + this.lastName;
+                console.log(name);
+            }
+        };
+        console.log(person.firstName + ' ' + person.lastName);
+        console.log(person.firstName + ' ' + 'always' + ' ' + person.interest);
+        console.log(person.age);
+        console.log(person.siblings.firstSister);
+        person.greeting();
+
+
+        const x = {
+            name: 'vinoth',
+            age: 22,
+            Qualification: "B.E"
+        };
+        console.log(x);
+
+        // entries
+        console.log(Object.entries(x), 'entries');
+
+        // fromEntries
+        console.log(Object.fromEntries([
+            ['a', 1],
+            ['b', 2],
+            ['c', 3],
+            ['d', 4]
+        ]), 'fromEntries');
+
+        // // seal
+        // console.log(Object.seal(x), 'seal');
+        // x.age = 25;
+        // x.lastName = 'shanmugam';
+        // console.log(x);
+
+        // // isSealed
+        // console.log(Object.isSealed(x), 'isSealed');
+
+        // // freeze
+        // console.log(Object.freeze(x), 'freeze');
+        // x.age = 30;
+        // x.secondName = 'raja';
+        // console.log(x);
+
+        // isFrozen
+        console.log(Object.isFrozen(x), 'isFrozen');
+
+        // isExtensible
+        console.log(Object.isExtensible(x), 'isExtensible');
+
+        // keys
+        console.log(Object.keys(x), 'keys');
+
+        // values
+        console.log(Object.values(x), 'values');
+
+        // hasOwnProperty
+        console.log(x.hasOwnProperty("Qualification"), 'hasOwnProperty');
+        console.log(x.hasOwnProperty('lastName'));
+        console.log(x.hasOwnProperty('toString'));
+
+        // hasOwn
+        console.log(Object.hasOwn(x, 'name'), 'hasOwn');
+        console.log(Object.hasOwn(x, 'hasOwnProperty'));
+        console.log(Object.hasOwn(x, 'age'));
+
+        const y = {
+            eyeColor: 'black',
+            isAlive: true
+        };
+
+        // assign
+        let a = Object.assign(x, y);
+        console.log(a, 'assign');
+        console.log(a === x);
+
+
+
+    </script>
+</body>
+
+</html>

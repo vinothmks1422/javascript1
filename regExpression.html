@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+
+<body>
+    <script>
+        let a = "My Name is Vinoth";
+        let b = "0123456789";
+
+        let text = a.match(/[abc]/g)
+        console.log(text);
+        
+        
+        let text12 = a.match(/[^abc]/g)
+        console.log(text12);
+
+        let text0 = a.match(/[a-d]/g);
+        console.log(text0);
+
+        let text1 = a.match(/[A-D]/g);
+        console.log(text1);
+
+        let text2 = a.match(/[a-z]/g);
+        console.log(text2);
+
+        let text3 = a.match(/[A-Z]/g);
+        console.log(text3);
+
+        let text4 = a.match(/[A-d]/g);
+        console.log(text4);
+
+        let text5 = a.match(/[a-z]/gi)
+        console.log(text5);
+
+
+        let text6 = a.match(/[^a-d]/g)
+        console.log(text6);
+
+        let text7 = a.match(/[^A-D]/g)
+        console.log(text7);
+
+        let text8 = a.match(/[^a-z]/g)
+        console.log(text8);
+
+        let text9 = a.match(/[^A-Z]/g)
+        console.log(text9);
+
+        let text10 = a.match(/[^A-d]/g)
+        console.log(text10);
+
+        let text11 = a.match(/[^a-z]/gi)
+        console.log(text11);
+
+
+
+        let number = b.match(/[123]/g);
+        console.log(number);
+
+        let number0 = b.match(/[0-9]/g);
+        console.log(number0);
+
+        let number1 = b.match(/[1-4]/g);
+        console.log(number1);
+
+        let number2 = b.match(/[^0-9]/g);
+        console.log(number2);
+
+        let number3 = b.match(/[^1-4]/g);
+        console.log(number3);
+
+        let number4 = b.match(/[^123]/g);
+        console.log(number4);
+
+        
+    </script>
+</body>
+
+</html>

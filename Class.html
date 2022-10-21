@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            constructor(n1, n2, n3) {
+                this.name = n1;
+                this.age = n2;
+                this.id = n3;
+            }
+        }
+        employee = new Employee("vinoth", 22, 265);
+
+
+        console.log(employee);
+
+        class Car {
+            constructor(carName, engineType, fuelType, carColor, gearType,breakType) {
+                this.Name = carName;
+                this.engine = engineType;
+                this.fuel = fuelType;
+                this.color = carColor;
+                this.gearSystem = gearType;
+                this.breakingSystem = breakType;
+            }
+        }
+
+        CarFeature = new Car('TOYOTA', 'Four Stock engine', 'Petrol', 'White', "Manual and Automatic", "ABS and DISK")
+
+        console.log(CarFeature);
+    </script>
+</body>
+
+</html>
